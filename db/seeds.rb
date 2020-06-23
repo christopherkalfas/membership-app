@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+users = User.create([{name: "Chris"}, {name:"Steve"}, {name:"Brian"}])
+
+groups = Group.create([{name:"Roswell's Finest"}, {name:"Average Joes"}])
+
+membership = Membership.create([{user_id: 1, group_id: 1}])
