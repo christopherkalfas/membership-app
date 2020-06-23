@@ -5,9 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Group.destroy_all
+Membership.destroy_all
 
-users = User.create([{name: "Chris"}, {name:"Steve"}, {name:"Brian"}])
+# users = User.create([{name: "Chris"}, {name:"Steve"}, {name:"Brian"}])
 
-groups = Group.create([{name:"Roswell's Finest"}, {name:"Average Joes"}])
+# groups = Group.create([{name:"Roswell's Finest"}, {name:"Average Joes"}])
 
-membership = Membership.create([{user_id: 1, group_id: 1}])
+# membership = Membership.create([{user_id: 1, group_id: 1}])
