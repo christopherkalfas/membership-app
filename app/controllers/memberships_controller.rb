@@ -1,5 +1,5 @@
 class MembershipsController < ApplicationController
-
+   
     def index 
         @memberships = Membership.all 
     end 
@@ -25,4 +25,8 @@ class MembershipsController < ApplicationController
     def membership_params 
         params.require(:membership).permit(:user_id, :group_id)
     end 
+
+    def load_group
+        @group = Group.find(params[:group_id])
+      end
 end

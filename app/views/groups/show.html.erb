@@ -6,6 +6,9 @@
     <li><%= user.name %></li>
   <% end %>
 </ul>
-
-<%= link_to("Add new Member", new_membership_path)%>
+<% if can? :update, @group %>
+  <%= link_to "Add new Member", new_membership_path %>
+<%end%>
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path %>
 

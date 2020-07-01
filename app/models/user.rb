@@ -8,11 +8,5 @@ class User < ApplicationRecord
   
     validates_uniqueness_of :email
 
-    def memberships 
-        Membership.all.select {|membership| membership.user == self}
-    end 
-
-    def groups 
-        memberships.collect {|membership| membership.group}
-    end 
+   
 end

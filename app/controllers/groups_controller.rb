@@ -1,10 +1,13 @@
 class GroupsController < ApplicationController
+    before_action :authenticate!, except: [:index, :show]
     def index 
         @groups = Group.all
     end 
 
     def show 
         @group = Group.find(params[:id])
+        # @membership = @group.users
+        # @user = User.find(params[:id]) if current_user
     end 
 
     def new 
