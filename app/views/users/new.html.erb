@@ -24,6 +24,10 @@
     <%= f.label :password %><br />
     <%= f.password_field :password %>
   </div>
+  <div class="field">
+    <%= f.hidden_field :invitation_token %>
+  </div>
+
 
   </div>
   <div class="actions"><%= f.submit "Sign Up" %></div>

@@ -17,6 +17,9 @@
   <%= link_to "Sign Up", signup_path %> or
   <%= link_to "Log In", login_path %>
 <% end %>
+
+      <%= render :partial => 'users/user_bar' %>
+
     <%= yield %>
   </body>
 </html>
